@@ -34,9 +34,9 @@ jobs:
         pip install -r requirements.txt
     - name: Run super-linter
       uses: github/super-linter@v4
-        env:
-          IGNORE_GITIGNORED_FILES: true
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      env:
+        IGNORE_GITIGNORED_FILES: true
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Run Tests
       env:
