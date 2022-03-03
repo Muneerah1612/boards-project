@@ -35,14 +35,6 @@ jobs:
 
         coverage run manage.py test --settings=hms.settings.testing
 
-    - name: Run super-linter
-      uses: github/super-linter@v4
-        env:
-          IGNORE_GITIGNORED_FILES: true
-          DEFAULT_BRANCH: master
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-
 
     - name: Django Testing
       run: |
